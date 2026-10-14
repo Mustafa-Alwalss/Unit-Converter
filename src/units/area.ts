@@ -1,14 +1,16 @@
 // Area units conversion to square meters
-export const areaUnits = {
-  mm²: 0.000001,
-  cm²: 0.0001,
-  m²: 1,
-  km²: 1000000,
-  in²: 0.00064516,
-  ft²: 0.092903,
-  yd²: 0.836127,
-  acre: 4046.86,
-  hectare: 10000
+import type {IUnits} from "./interface.ts";
+
+export const areaUnits: Record<string, IUnits> = {
+  mm2: { factor: 0.000001, label: "Square Millimeters • mm²" },
+  cm2: { factor: 0.0001, label: "Square Centimeters • cm²" },
+  m2: { factor: 1, label: "Square Meters • m²" },
+  km2: { factor: 1000000, label: "Square Kilometers • km²" },
+  in2: { factor: 0.00064516, label: "Square Inches • in²" },
+  ft2: { factor: 0.092903, label: "Square Feet • ft²" },
+  yd2: { factor: 0.836127, label: "Square Yards • yd²" },
+  acre: { factor: 4046.86, label: "Acres • acre" },
+  hectare: { factor: 10000, label: "Hectares • ha" }
 };
 
 export type AreaUnit = keyof typeof areaUnits;

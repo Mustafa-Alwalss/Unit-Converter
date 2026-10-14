@@ -1,15 +1,18 @@
 // Time units conversion to seconds
-export const timeUnits = {
-  ns: 0.000000001,
-  µs: 0.000001,
-  ms: 0.001,
-  s: 1,
-  min: 60,
-  h: 3600,
-  day: 86400,
-  week: 604800,
-  month: 2.628e6, // average (30.44 days)
-  year: 3.154e7   // average (365.25 days)
+import type {IUnits} from "./interface.ts";
+
+
+export const timeUnits: Record<string, IUnits> = {
+  ns: { factor: 0.000000001, label: "Nanoseconds • ns" },
+  µs: { factor: 0.000001, label: "Microseconds • µs" },
+  ms: { factor: 0.001, label: "Milliseconds • ms" },
+  s: { factor: 1, label: "Seconds • s" },
+  min: { factor: 60, label: "Minutes • min" },
+  h: { factor: 3600, label: "Hours • h" },
+  day: { factor: 86400, label: "Days • day" },
+  week: { factor: 604800, label: "Weeks • week" },
+  month: { factor: 2.628e6, label: "Months • month" },
+  year: { factor: 3.154e7, label: "Years • year" }
 };
 
 export type TimeUnit = keyof typeof timeUnits;

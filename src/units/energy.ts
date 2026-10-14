@@ -1,14 +1,17 @@
 // Energy units conversion to joules
-export const energyUnits = {
-  J: 1,
-  kJ: 1000,
-  MJ: 1000 ** 2,
-  GJ: 1000 ** 3,
-  cal: 4.184,
-  kcal: 4184,
-  Wh: 3600,
-  kWh: 3600000,
-  eV: 1.602176634e-19
+import type {IUnits} from "./interface.ts";
+
+
+export const energyUnits: Record<string, IUnits> = {
+  J: { factor: 1, label: "Joules • J" },
+  kJ: { factor: 1000, label: "Kilojoules • kJ" },
+  MJ: { factor: 1000 ** 2, label: "Megajoules • MJ" },
+  GJ: { factor: 1000 ** 3, label: "Gigajoules • GJ" },
+  cal: { factor: 4.184, label: "Calories • cal" },
+  kcal: { factor: 4184, label: "Kilocalories • kcal" },
+  Wh: { factor: 3600, label: "Watt-hours • Wh" },
+  kWh: { factor: 3600000, label: "Kilowatt-hours • kWh" },
+  eV: { factor: 1.602176634e-19, label: "Electronvolts • eV" }
 };
 
 export type EnergyUnit = keyof typeof energyUnits;
