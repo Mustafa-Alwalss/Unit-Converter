@@ -2,15 +2,20 @@
 import type {IUnits} from "./interface.ts";
 
 export const pressureUnits: Record<string, IUnits> = {
-  Pa: { factor: 1, label: "Pascals • Pa" },
-  kPa: { factor: 1000, label: "Kilopascals • kPa" },
-  MPa: { factor: 1000 ** 2, label: "Megapascals • MPa" },
-  GPa: { factor: 1000 ** 3, label: "Gigapascals • GPa" },
-  bar: { factor: 100000, label: "Bar • bar" },
-  psi: { factor: 6894.76, label: "Pounds per Square Inch • psi" },
-  atm: { factor: 101325, label: "Standard Atmosphere • atm" },
-  Torr: { factor: 133.322, label: "Torr • Torr" },
-  mmHg: { factor: 133.322, label: "Millimeters of Mercury • mmHg" }
+  Ba:   { factor: 0.1,                     label: "Baryes • Ba" },
+  Pa:   { factor: 1,                       label: "Pascals • Pa" },
+  kPa:  { factor: 1000,                    label: "Kilopascals • kPa" },
+  MPa:  { factor: 1000 ** 2,               label: "Megapascals • MPa" },
+  GPa:  { factor: 1000 ** 3,               label: "Gigapascals • GPa" },
+  mbar: { factor: 100,                     label: "Millibars • mbar" },
+  bar:  { factor: 100000,                  label: "Bar • bar" },
+  psi:  { factor: 6894.757293168361,       label: "Pounds per Square Inch • psi" },
+  atm:  { factor: 101325,                  label: "Standard Atmosphere • atm" },
+  at:   { factor: 98066.5,                 label: "Technical Atmosphere • at" },
+  Torr: { factor: 101325/760,              label: "Torr • Torr" },
+  mmHg: { factor: 133.322387415,           label: "Millimeters of Mercury • mmHg" },
+  inHg: { factor: 3386.388640341,          label: "Inches of Mercury • inHg" },
+  psf:  { factor: 47.8802589803358,        label: "Pounds per Square Foot • psf" }
 };
 
 export type PressureUnit = keyof typeof pressureUnits;
