@@ -2,7 +2,7 @@
 
 A comprehensive, responsive unit conversion application built with React and TypeScript that supports conversions across 10 different measurement categories with over 200 units.
 
-![UnitShift - Professional Unit Converter](./screenshots/Screenshot 2026-10-15 at 11-13-57 unit_converter.png)
+![UnitShift - Professional Unit Converter](./screenshots/Screenshot%202026-10-15%20at%2011-13-57%20unit_converter.png)
 *Screenshot of the UnitShift unit converter application*
 
 ## Features
