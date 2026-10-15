@@ -1,1 +1,99 @@
+/* Fonts + icon font (must come first) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
 @import "tailwindcss";
+
+/*
+ * Design tokens for the UnitShift (Stitch) design — Tailwind v4 syntax.
+ * Stitch exports these as a `tailwind.config` object (Tailwind v3). Tailwind v4
+ * ignores that format, so every class like `bg-surface-container` or
+ * `font-label-pill` silently did nothing. They are declared here instead.
+ * If you have the exact values from your Stitch export, replace them below.
+ */
+@theme {
+  /* colors */
+  --color-background: #0e121c;
+  --color-surface-container-lowest: #090d16;
+  --color-surface-container-low: #151925;
+  --color-surface-container: #191d29;
+  --color-surface-container-high: #232733;
+  --color-surface-container-highest: #2e323e;
+  --color-surface-bright: #343846;
+  --color-on-surface: #dfe2f2;
+  --color-on-surface-variant: #c7c4d7;
+  --color-outline: #908fa0;
+  --color-primary: #c0c1ff;
+  --color-on-primary: #1000a9;
+  --color-primary-container: #8083ff;
+  --color-on-primary-container: #0d0096;
+  --color-secondary: #bdc2ff;
+  --color-tertiary: #4cd7f6;
+  --color-error: #ffb4ab;
+
+  /* font families */
+  --font-body-sm: "Inter", system-ui, sans-serif;
+  --font-headline-sm: "Inter", system-ui, sans-serif;
+  --font-label-pill: "Inter", system-ui, sans-serif;
+  --font-label-capital: "Inter", system-ui, sans-serif;
+  --font-label-numeric-md: "JetBrains Mono", ui-monospace, monospace;
+  --font-label-numeric-lg: "JetBrains Mono", ui-monospace, monospace;
+
+  /* type scale (size + line height + weight + tracking) */
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 20px;
+  --text-headline-sm: 15px;
+  --text-headline-sm--line-height: 22px;
+  --text-headline-sm--font-weight: 600;
+  --text-label-pill: 13px;
+  --text-label-pill--line-height: 18px;
+  --text-label-pill--font-weight: 500;
+  --text-label-capital: 11px;
+  --text-label-capital--line-height: 16px;
+  --text-label-capital--font-weight: 600;
+  --text-label-capital--letter-spacing: 0.04em;
+  --text-label-numeric-lg: 32px;
+  --text-label-numeric-lg--line-height: 40px;
+  --text-label-numeric-lg--font-weight: 500;
+
+  /* shape */
+  --radius-lg: 1rem;
+
+  /* animation */
+  --animate-fade-in: fade-in 0.25s ease-out;
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body-sm);
+  /* soft indigo / cyan glows behind the content */
+  background-image:
+    radial-gradient(60rem 40rem at 15% -10%, rgba(128, 131, 255, 0.18), transparent 60%),
+    radial-gradient(50rem 35rem at 90% 10%, rgba(76, 215, 246, 0.10), transparent 60%);
+  background-attachment: fixed;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* hide number spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
