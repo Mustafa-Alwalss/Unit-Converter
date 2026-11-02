@@ -2,7 +2,7 @@
 
 A comprehensive, responsive unit conversion application built with React and TypeScript that supports conversions across 10 different measurement categories with over 200 units.
 
-![UnitConverter - Professional Unit Converter](./screenshots/Screenshot%202026-10-15%20at%2011-13-57%20unit_converter.png)
+![UnitConverter - Professional Unit Converter](./screenshots/SS.png)
 _Screenshot of the UnitConverter unit converter application_
 
 ## Features
