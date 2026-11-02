@@ -1,9 +1,9 @@
-# UnitShift - Professional Unit Converter
+# UnitConverter - Professional Unit Converter
 
 A comprehensive, responsive unit conversion application built with React and TypeScript that supports conversions across 10 different measurement categories with over 200 units.
 
-![UnitShift - Professional Unit Converter](./screenshots/Screenshot%202026-10-15%20at%2011-13-57%20unit_converter.png)
-*Screenshot of the UnitShift unit converter application*
+![UnitConverter - Professional Unit Converter](./screenshots/Screenshot%202026-10-15%20at%2011-13-57%20unit_converter.png)
+_Screenshot of the UnitConverter unit converter application_
 
 ## Features
 
@@ -19,19 +19,19 @@ A comprehensive, responsive unit conversion application built with React and Typ
 
 ## Unit Categories and Supported Units
 
-| # | Category | Number of Units |
-|---|----------|-----------------|
-| 1 | Length | 35 |
-| 2 | Mass | 15 |
-| 3 | Time | 21 |
-| 4 | Temperature | 8 |
-| 5 | Area | 16 |
-| 6 | Volume | 27 |
-| 7 | Data | 34 |
-| 8 | Energy | 19 |
-| 9 | Pressure | 14 |
-| 10 | Speed | 12 |
-| **Total** | **All Categories** | **201** |
+| #         | Category           | Number of Units |
+| --------- | ------------------ | --------------- |
+| 1         | Length             | 35              |
+| 2         | Mass               | 15              |
+| 3         | Time               | 21              |
+| 4         | Temperature        | 8               |
+| 5         | Area               | 16              |
+| 6         | Volume             | 27              |
+| 7         | Data               | 34              |
+| 8         | Energy             | 19              |
+| 9         | Pressure           | 14              |
+| 10        | Speed              | 12              |
+| **Total** | **All Categories** | **201**         |
 
 ### Detailed Unit Lists
 
@@ -70,13 +70,16 @@ mm_per_s, cm_per_s, in_per_s, ft_per_s, mi_per_h, knot, km_per_h, yd_per_s, m_pe
 - **Framework**: React with TypeScript
 - **Styling**: Tailwind CSS v4
 - **Build Tool**: Vite
+
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js (v18+ recommended)
 - npm or yarn package manager
 
 ### Installation
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/unit-converter.git
@@ -95,17 +98,23 @@ mm_per_s, cm_per_s, in_per_s, ft_per_s, mi_per_h, knot, km_per_h, yd_per_s, m_pe
    ```
 
 ### Development
+
 To start the development server with hot module replacement:
+
 ```bash
 npm run dev
 ```
+
 or
+
 ```bash
 yarn dev
 ```
 
 The application will be available at `http://localhost:5173`
+
 ## Project Structure
+
 ```
 unit-converter/
 ├── src/
@@ -147,7 +156,4 @@ unit-converter/
 └── README.md                   # This file
 ```
 
-
-
 ---
-

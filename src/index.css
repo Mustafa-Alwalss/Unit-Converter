@@ -4,7 +4,7 @@
 @import "tailwindcss";
 
 /*
- * Design tokens for the UnitShift (Stitch) design — Tailwind v4 syntax.
+ * Design tokens for the UnitConverter (Stitch) design — Tailwind v4 syntax.
  * Stitch exports these as a `tailwind.config` object (Tailwind v3). Tailwind v4
  * ignores that format, so every class like `bg-surface-container` or
  * `font-label-pill` silently did nothing. They are declared here instead.
@@ -61,17 +61,27 @@
   /* animation */
   --animate-fade-in: fade-in 0.25s ease-out;
   @keyframes fade-in {
-    from { opacity: 0; transform: translateY(4px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
 @utility scrollbar-none {
   scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-html, body, #root {
+html,
+body,
+#root {
   min-height: 100%;
 }
 
@@ -82,8 +92,16 @@ body {
   font-family: var(--font-body-sm);
   /* soft indigo / cyan glows behind the content */
   background-image:
-    radial-gradient(60rem 40rem at 15% -10%, rgba(128, 131, 255, 0.18), transparent 60%),
-    radial-gradient(50rem 35rem at 90% 10%, rgba(76, 215, 246, 0.10), transparent 60%);
+    radial-gradient(
+      60rem 40rem at 15% -10%,
+      rgba(128, 131, 255, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      50rem 35rem at 90% 10%,
+      rgba(76, 215, 246, 0.1),
+      transparent 60%
+    );
   background-attachment: fixed;
 }
 
@@ -95,5 +113,11 @@ body {
 
 /* hide number spinners */
 input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
